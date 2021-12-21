@@ -1,0 +1,71 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <PreferenceCategory android:title="用户信息设置">
+        <EditTextPreference
+                android:key="confirm"
+                android:inputType="textPassword"
+                android:icon="@drawable/ic_auth"
+                android:dialogTitle="请输入旧密码"
+                android:title="身份认证" />
+        <EditTextPreference
+                android:key="username"
+                android:icon="@drawable/ic_user"
+                android:dialogTitle="请输入用户名"
+                android:enabled="false"
+                android:title="用户名修改" />
+        <EditTextPreference
+                android:key="password"
+                android:dialogTitle="请输入密码"
+                android:icon="@drawable/ic_pass"
+                android:inputType="textPassword"
+                android:enabled="false"
+                android:title="密码修改" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="天气城市设置" >
+        <EditTextPreference
+                android:key="city"
+                android:dialogTitle="请输入默认城市"
+                android:icon="@drawable/ic_city_new"
+                android:title="默认城市修改" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="历史天气设置" >
+<!--        <ListPreference-->
+<!--                android:key="day_past"-->
+<!--                android:title="历史天数修改"-->
+<!--                android:icon="@drawable/ic_history_new"-->
+<!--                android:dialogTitle="选择天数"-->
+<!--                android:entries="@array/day"-->
+<!--                android:entryValues="@array/day_value" />-->
+        <ListPreference
+                android:key="day_future"
+                android:icon="@drawable/ic_future_new"
+                android:title="城市个数修改"
+                android:dialogTitle="选择个数"
+                android:entries="@array/day"
+                android:entryValues="@array/day_value" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="登录配置" >
+        <SwitchPreference
+            android:key="login"
+            android:icon="@drawable/ic_setting_new"
+            android:summaryOn="下次将自动登录"
+            android:summaryOff="下次需要输入密码登录"
+            android:title="自动登录" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="添加城市">
+        <EditTextPreference
+            android:key="add_city"
+            android:dialogTitle="请输入要增加的城市"
+            android:icon="@drawable/ic_prefer"
+            android:title="增加喜欢的城市"/>
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
